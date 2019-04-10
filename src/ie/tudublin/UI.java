@@ -92,12 +92,17 @@ public class UI extends PApplet
 			Resistor resistor = resistors.get(i);
 
 			noFill();
+			strokeWeight(2);
 			x = width/2 - size/2;
 			y = ((i + 1) * size/4) + (i * size);
 			rect(x , y, size, size);
 
 			line(x - size/2, y + size/2, x, y + size/2);
 			line(x + size + size/2, y + size/2, x + size, y + size/2);
+
+			fill(50);
+			textSize(26);
+			text(resistor.hundreds + "" + resistor.tens + "" + resistor.ones, width - size/2, y + size/2);
 
 		}	
 	}

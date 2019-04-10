@@ -18,8 +18,10 @@ public class Resistor extends PApplet
     {
         value = v;
         
-        ones = value - ((hundreds * 100)  + (tens * 10));
-        tens = (value - (hundreds * 100)) / 10;
         hundreds =(value / 100);
+        tens = (value - (hundreds * 100)) / 10;
+        ones = value - ((hundreds * 100)  + (tens * 10));
+        
+        
     }
 }
