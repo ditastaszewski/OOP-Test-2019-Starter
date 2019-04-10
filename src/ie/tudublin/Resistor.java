@@ -22,6 +22,4 @@ public class Resistor extends PApplet
         tens = (value - (hundreds * 100)) / 10;
         hundreds =(value / 100);
     }
-
-
 }
