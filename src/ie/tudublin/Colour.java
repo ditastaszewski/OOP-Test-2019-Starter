@@ -15,6 +15,15 @@ public class Colour extends PApplet
     public int value;
     private String colour;
 
+    public void setValues(int red, int green, int blue, int iValue, String sColour) 
+    {
+        r = red;
+        g = green;
+        b = blue;
+        value = iValue;
+        colour = sColour;
+    }
+
     /**
      * @return the colour
      */
