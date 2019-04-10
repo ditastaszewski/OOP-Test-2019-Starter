@@ -81,9 +81,25 @@ public class UI extends PApplet
 		return colours.get(0);
 	}
 
-	public void drawResistor()
+	public void drawResistors()
 	{
+		int size = 150;
+		int x;
+		int y;
 
+		for (int i = 0 ; i < resistors.size(); i ++)
+		{
+			Resistor resistor = resistors.get(i);
+
+			noFill();
+			x = width/2 - size/2;
+			y = ((i + 1) * size/4) + (i * size);
+			rect(x , y, size, size);
+
+			line(x - size/2, y + size/2, x, y + size/2);
+			line(x + size + size/2, y + size/2, x + size, y + size/2);
+
+		}	
 	}
 
 	public void setup() 
@@ -95,6 +111,6 @@ public class UI extends PApplet
 	
 	public void draw()
 	{			
-
+		drawResistors();
 	}
 }
