@@ -14,13 +14,14 @@ public class Resistor extends PApplet
     public int tens;
     public int hundreds;
 
-    public void setValues(int v, int o, int t, int h) 
+    public void setValues(int v) 
     {
         value = v;
-        ones = o;
-        tens = t;
-        hundreds = h;
+        
+        ones = value - ((hundreds * 100)  + (tens * 10));
+        tens = (value - (hundreds * 100)) / 10;
+        hundreds =(value / 100);
     }
-    
+
 
 }
