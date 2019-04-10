@@ -21,7 +21,5 @@ public class Resistor extends PApplet
         hundreds =(value / 100);
         tens = (value - (hundreds * 100)) / 10;
         ones = value - ((hundreds * 100)  + (tens * 10));
-        
-        
     }
 }

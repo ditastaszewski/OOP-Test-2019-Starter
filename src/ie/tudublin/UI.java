@@ -1,6 +1,9 @@
 package ie.tudublin;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import javax.lang.model.util.ElementScanner6;
 
 import processing.core.PApplet;
 import processing.data.Table;
@@ -103,7 +106,30 @@ public class UI extends PApplet
 			fill(50);
 			textSize(26);
 			text(resistor.hundreds + "" + resistor.tens + "" + resistor.ones, width - size/2, y + size/2);
+			colorMode(RGB);
+			noStroke();
 
+			for (int j = 0 ; j < 3 ; j ++)
+			{
+				Colour colour;
+				if (j == 0)
+				{
+					colour = findColour(resistor.hundreds);
+				}
+				else if (j == 1)
+				{
+					colour = findColour(resistor.tens);
+				}
+				else
+				{
+					colour = findColour(resistor.ones);
+				}
+
+				println(colour.r);
+				fill(colour.r, colour.g, colour.b);
+				rect(x + j * size/6 + size/12, y, size/12, size);
+			}
+			stroke(0);
 		}	
 	}
 
